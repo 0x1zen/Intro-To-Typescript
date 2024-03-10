@@ -1,24 +1,42 @@
+// Problem Statement:
+// Write a TypeScript function called calculateAverage that takes an 
+// array of numbers as input and returns the average of those numbers.
+//  Ensure that the function handles the case where the input array is 
+//  empty by returning 0.
+
+function calculateAverage(arr:number[]){
+    var average=0;
+    var count=0;
+    for(let i=0;i<arr.length;i++){
+        average+=arr[i];
+        count++;
+    }
+    return average/count;
+}
+
+console.log(calculateAverage([4,-3,5,3,9]));
+
 
 // Arrays In Ts
-interface User {
-	firstName: string;
-	lastName: string;
-	age: number;
-}
+// interface User {
+// 	firstName: string;
+// 	lastName: string;
+// 	age: number;
+// }
 
-function filteredUsers(users: User[]) {
-    return users.filter(x => x.age >= 18);
-}
+// function filteredUsers(users: User[]) {
+//     return users.filter(x => x.age >= 18);
+// }
 
-console.log(filteredUsers([{
-    firstName: "raj",
-    lastName: "dubal",
-    age: 21
-}, {
-    firstName: "atul",
-    lastName: "patil",
-    age: 16
-}, ]));
+// console.log(filteredUsers([{
+//     firstName: "raj",
+//     lastName: "dubal",
+//     age: 21
+// }, {
+//     firstName: "atul",
+//     lastName: "patil",
+//     age: 16
+// }, ]));
 
 // function maxValue(arr: number[]) {
 //     let max = 0;

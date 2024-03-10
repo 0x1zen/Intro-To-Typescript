@@ -1,13 +1,11 @@
 "use strict";
-function filteredUsers(users) {
-    return users.filter(x => x.age >= 18);
+function calculateAverage(arr) {
+    var average = 0;
+    var count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        average += arr[i];
+        count++;
+    }
+    return average / count;
 }
-console.log(filteredUsers([{
-        firstName: "raj",
-        lastName: "dubal",
-        age: 21
-    }, {
-        firstName: "atul",
-        lastName: "patil",
-        age: 16
-    },]));
+console.log(calculateAverage([4, -3, 5, 3, 9]));
