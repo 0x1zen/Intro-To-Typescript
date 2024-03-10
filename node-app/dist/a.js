@@ -1,12 +1,13 @@
 "use strict";
-class Employee {
-    constructor(n, a) {
-        this.name = n;
-        this.age = a;
-    }
-    greet(phrase) {
-        console.log(`${phrase} ${this.name}`);
-    }
+function filteredUsers(users) {
+    return users.filter(x => x.age >= 18);
 }
-const e = new Employee("Raj", 15);
-e.greet("Hello");
+console.log(filteredUsers([{
+        firstName: "raj",
+        lastName: "dubal",
+        age: 21
+    }, {
+        firstName: "atul",
+        lastName: "patil",
+        age: 16
+    },]));
