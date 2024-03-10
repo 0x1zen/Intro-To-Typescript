@@ -1,22 +1,57 @@
-interface Person {
+
+// Types
+type Employee = {
     name: string;
-    age: number;
-    greet(phrase: string): void;
+    startDate: Date;
+  };
+  
+  type Manager = {
+    name: string;
+    department: string;
+  };
+
+  type TechLead=Employee & Manager;
+
+  const t:TechLead={
+    name:"Raj",
+    startDate:new Date(),
+    department:"Computer"
+  }
+type User = {
+	firstName: string;
+	lastName: string;
+	age: number
 }
 
-class Employee implements Person {
-    name: string;
-    age: number;
+type GreetArg=number | string | boolean;
 
-    constructor(n: string, a: number) {
-        this.name = n;
-        this.age = a;
-    }
+function greet(id:GreetArg){
 
-    greet(phrase: string) {
-        console.log(`${phrase} ${this.name}`);
-    }
 }
+greet(true);
 
-const e=new Employee("Raj",15)
-e.greet("Hello");
+
+// Interfaces
+
+// interface Person {
+//     name: string;
+//     age: number;
+//     greet(phrase: string): void;
+// }
+
+// class Employee implements Person {
+//     name: string;
+//     age: number;
+
+//     constructor(n: string, a: number) {
+//         this.name = n;
+//         this.age = a;
+//     }
+
+//     greet(phrase: string) {
+//         console.log(`${phrase} ${this.name}`);
+//     }
+// }
+
+// const e=new Employee("Raj",15)
+// e.greet("Hello");
